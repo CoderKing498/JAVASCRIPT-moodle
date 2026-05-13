@@ -3,7 +3,10 @@
     inglés   : "Hello",
     francés  : "Bonjour",
     portugués: "Olá",
-    Japones: "Konichiwa"
+    Japones: "Konichiwa",
+    Mandarin : "Ni hao",
+    Lingala : "Mbote",
+    Arabe : "Marhaban"
   };
 
   function crearSaludo(idioma) {
