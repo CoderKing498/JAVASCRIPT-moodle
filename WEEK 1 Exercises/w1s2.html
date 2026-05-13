@@ -121,11 +121,48 @@
         <h1>Tema 2 - Condicionales</h1>
         <p> if/ else / else if alplicados al Dom</p>
     </header>
+    <div class="teoria">
+    <h2>Condicionales en el DOM</h2>
+    <p>
+      Los condicionales permiten que el DOM <strong>reaccione diferente</strong>
+      según los datos del usuario. Combinamos <code>if / else if / else</code>
+      con <code>document.getElementById</code> para cambiar contenido y estilos dinámicamente.
+    </p>
+    <pre>
+// ── Leemos el valor del input ─────────────────────────────
+const edad = Number(document.getElementById("inputEdad").value);
+
+// ── Evaluamos con if / else if / else ─────────────────────
+if (edad >= 18) {
+  // Modificamos el DOM si la condición es verdadera
+  document.getElementById("resultado").textContent = "Mayor de edad ✅";
+  document.getElementById("resultado").style.color = "#5ACCA4"; // verde
+} else if (edad >= 12) {
+  document.getElementById("resultado").textContent = "Adolescente 🔵";
+} else {
+  document.getElementById("resultado").textContent = "Niño/a 🟡";
+}
+
+// ── Cambiar clases CSS dinámicamente ─────────────────────
+// classList.add()    → agrega una clase
+// classList.remove() → elimina una clase
+// classList.toggle() → alterna una clase (si está la quita, si no la pone)
+elemento.classList.add("activo");
+elemento.classList.remove("inactivo");</pre>
+  </div>
 
     <div class="exercise">
         <h3>Age qualifier</h3>
 
         <label for="inputAge">Enter your Age</label>
+        <input type="number" id="inputAge" placeholder="Ej:20" min="0" max="120"/>
+
+        <button class="btn" onclick="clasifyAge()">Clasificar</button>
+
+        <div class="result" id="resultAge"></div>
+    </div>
+
+
     </div>
 </body>
 </html>
