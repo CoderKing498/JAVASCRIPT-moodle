@@ -129,7 +129,24 @@
             <h2>DOM</h2>
             <p>El <strong>DOM</strong> (Document Object Model) es la representación
       del HTML como objetos que JavaScript puede leer y modificar en tiempo real.
-      Con JS seleccionamos elementos y les asignamos valores usando <strong>variables</strong></p>
+      Con JS seleccionamos elementos y les asignamos valores usando <strong>variables</strong>
+      </p>
+      <pre>
+// ── Seleccionamos el elemento por su id ──────────────────
+// document.getElementById devuelve el elemento HTML como objeto
+const titulo = document.getElementById("miTitulo");
+
+// ── Declaramos variables con distintos tipos ─────────────
+const nombre = "Ana";      // String  — texto entre comillas
+const edad   = 20;         // Number  — número sin comillas
+const activo = true;       // Boolean — solo true o false
+
+// ── Usamos las variables para modificar el DOM ───────────
+// .textContent cambia el texto visible del elemento
+titulo.textContent = "Hola, " + nombre + ". Tienes " + edad + " años.";
+
+// ── Template literal (forma moderna con backticks) ───────
+titulo.textContent = `Hola, ${nombre}. Tienes ${edad} años.`;</pre>
         </div>
 
        <div class="ejercicio">

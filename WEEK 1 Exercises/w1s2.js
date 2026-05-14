@@ -1,35 +1,35 @@
-function clasifyAge(){
+function clasificarEdad(){
 
-    const age = Number(document.getElementById("inputAge").value);
+    const edad = Number(document.getElementById("inputEdad").value);
 
-    const box = document.getElementById("resultAge");
+    const caja = document.getElementById("resultadoEdad");
 
-    if(!age || isNaN(age) || age <= 0){
+    if(!edad || isNaN(edad) || edad <= 0){
         box.textContent = "Please, enter a valid number";
         box.className = "resultado visible error";
         return;
     }
 
-    let message;
+    let mensaje;
     let clase;
 
-    if (age < 0 || age > 120){
-        message = "Age out of range (0/120)"
+    if (edad< 0 || edad > 120){
+        mensaje = "Age out of range (0/120)"
         clase = "resultado visible error"
-    } else if (age <= 11){
-        message = `🧒 At ${age} years old you are a child`
+    } else if (edad <= 11){
+        mensaje = `🧒 At ${edad} years old you are a child`
         clase = "resultado visible info"
-    } else if (age <= 17){
-        message = `🧑 At ${age} years old you are a teenager`
+    } else if (edad <= 17){
+        mensaje = `🧑 At ${edad} years old you are a teenager`
         clase = "resultado visible warning"
-    }  else if (age <= 64){
-        message = `🧑‍💼 At ${age} years old you are an adult ✅`
+    }  else if (edad <= 64){
+        mensaje = `🧑‍💼 At ${edad} years old you are an adult ✅`
         clase = "resultado visible ok"
     } else {
-        message = `👴 At ${age} years old you are a senior citizen`
+        mensaje = `👴 At ${edad} years old you are a senior citizen`
         clase = "resultado visible info"
     }
 
-    box.textContent = message;
+    box.textContent = mensaje;
     box.className = clase;
 }
